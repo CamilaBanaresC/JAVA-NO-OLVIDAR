@@ -1,0 +1,17 @@
+	Parcerar una fecha de String a date 
+  
+  
+  try {
+			 DateFormat fechaHora1 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+				String fe1 = "2011/08/17";
+				String[] partsDate1 = fe1.split("/");
+				String parte1 = partsDate1[0];
+				String parte2 = partsDate1[1];
+				String parte3 = partsDate1[2];
+				String fechaFinal = parte1+"-"+parte2+"-"+parte3 +" 00:00:00";
+				Date dateModified = fechaHora1.parse(fechaFinal);
+			System.out.println("fechaModified: " + dateModified);
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
